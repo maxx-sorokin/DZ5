@@ -1,9 +1,14 @@
-﻿int[] numbers = new int[5];
+﻿// Задача 36: Задайте одномерный массив, заполненный случайными числами.
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+int[] numbers = new int[5];
 
 FillArray(numbers);
 PrintArray(numbers);
 
 Console.WriteLine($"Сумма элементов на чётных позициях - {FindsSumOfElementsInOddPositions(numbers)}");
+
+
 
 int FindsSumOfElementsInOddPositions(int[] array)
 {
