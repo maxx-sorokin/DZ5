@@ -1,4 +1,4 @@
-﻿int[] numbers = new int[6];
+﻿int[] numbers = new int[5];
 
 FillArray(numbers);
 PrintArray(numbers);
@@ -8,12 +8,9 @@ Console.WriteLine($"Сумма элементов на чётных позици
 int FindsSumOfElementsInOddPositions(int[] array)
 {
     int sum = 0;
-    for (int i = 1; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i += 2)
     {
-        if (i % 2 != 0)
-        {
-            sum += array[i];
-        }
+        sum += array[i];
     }
     return sum;
 }
@@ -21,7 +18,7 @@ int FindsSumOfElementsInOddPositions(int[] array)
 void PrintArray(int[] array)
 {
     Console.WriteLine();
-    for (var i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"{array[i]} ");
     }
@@ -31,7 +28,7 @@ void PrintArray(int[] array)
 void FillArray(int[] array)
 {
     Random random = new Random();
-    for (var i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         array[i] = random.Next(-10, 11);
     }

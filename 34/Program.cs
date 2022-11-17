@@ -21,7 +21,7 @@ int HowManyEvenNumbersInTheArray (int[] array)
 void PrintArray(int[] array)
 {
     Console.WriteLine();
-    for (var i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"{array[i]} ");
     }
@@ -31,7 +31,7 @@ void PrintArray(int[] array)
 void FillArray(int[] array)
 {
     Random random = new Random();
-    for (var i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         array[i] = random.Next(100, 1000);
     }
