@@ -3,19 +3,19 @@
 FillArray(numbers);
 PrintArray(numbers);
 
-Console.WriteLine($"Количество чётных чисел в массиве - {HowManyEvenNumbersInTheArray(numbers)}");
+Console.WriteLine($"Сумма элементов на чётных позициях - {FindsSumOfElementsInOddPositions(numbers)}");
 
-int HowManyEvenNumbersInTheArray (int[] array)
+int FindsSumOfElementsInOddPositions(int[] array)
 {
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    int sum = 0;
+    for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] % 2 == 0)
+        if (i % 2 != 0)
         {
-            count++;
+            sum += array[i];
         }
     }
-    return count;
+    return sum;
 }
 
 void PrintArray(int[] array)
@@ -33,6 +33,6 @@ void FillArray(int[] array)
     Random random = new Random();
     for (var i = 0; i < array.Length; i++)
     {
-        array[i] = random.Next(100, 1000);
+        array[i] = random.Next(-10, 11);
     }
 }
